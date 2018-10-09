@@ -1,0 +1,121 @@
+//变量：通过@方式声明变量，这样可以对全局变量进行重复运用
+@min-height: 70px;
+@padding: 20px 0;
+header .navbar{/*设置导航条的高度*/
+    min-height: @min-height;/*最小高度为70px*/
+    padding: @padding;/*间隙为20px 0*/
+}
+@border: 1px solid #BC668D;
+header .active{/*重新设置.active的样式*/
+    border: @border;/*边框为1px solid #BC668D;*/
+}
+@font: 16px;
+.navbar-nav{
+    font-size: @font;/*字体大小为16px*/
+}
+@background: none !important;
+.navbar-nav .active a{
+    background: @background;/*提升优先级*/
+}
+@width: 100%;
+@margin: 0 auto;
+/*解决移动端宽度的bug*/
+@media only screen and (max-width: 768px){
+    header .navbar-collapse ul{
+        width: @width;/*让移动端ul的宽度为父div的100%,消除因为浮动带来的影响*/
+        margin: @margin;/* 水平居中*/
+    }
+}
+@position: absolute;
+@top: 190px;
+@left:450px;
+.flex-caption{
+    position: @position;/*绝对定位*/
+    top: @top;/*顶部为190px*/
+    left: @left;/*左边为450px*/
+}
+//嵌套    
+//#product-box p{
+//        line-height:1.8em;/*行间距为1.8em*/
+ //       text-indent: 2em;/*首行缩进2em*/
+//}
+#product-box{
+    p{
+        line-height:1.8em;/*行间距为1.8em*/
+        text-indent: 2em;/*首行缩进2em*/
+    } 
+}
+//.box{border:1px solid #d5d5d5}
+//.box span{font-size:45px;padding:36px 0 14px 0;color:#bc668d;text-align:center}
+//.box h3{font-size:20px;font-weight:200}
+//.box p{line-height:2em;margin-bottom:10px}
+//.box:hover{background-color:#bc668d;color:#fff}
+.box{
+    border: 1px solid #d5d5d5;/*边框*/
+    span{
+        font-size: 45px;
+        padding: 36px 0 14px 0;
+        color: #BC668D;
+        text-align: center;/*居中*/
+    }
+    h3{
+        font-size: 20px;
+        font-weight: 200;/*加粗*/
+    }
+    p{
+        line-height: 2em;/*行间距*/
+        margin-bottom: 10px;/*下外边距为10px*/
+    }
+    &:hover{
+        background-color: #BC668D;
+        color: #fff;
+    }
+}
+.aboutus img{/*控制关于图片大小*/
+    width: @width;
+}
+//.aboutus{margin-top:20px}/*顶部间隔20px*/
+//.aboutus p{line-height:1.75em}
+.aboutus{
+    margin-top:20px;/*上外边距为20px*/
+    p{
+        line-height: 1.75em;
+    }
+}
+@float: left;
+@text: center;
+//footer{background-color:#ebebeb}
+//footer h2{color:#d4c19c;text-align:center}
+//footer ul{list-style:none;margin:0;padding:0;float:left}
+//footer ul li{float:left;padding-left:120px}
+//footer ul li a{color:#000;font-size:16px}
+//footer ul li a:hover{color:#f8c469;text-decoration:none}
+//footer p{text-align:center}
+footer{
+    background-color: #EBEBEB;/*背景颜色*/
+        h2{
+            color:#D4C19C;
+            text-align: @text;/*居中对齐*/
+        }
+        ul{
+            list-style: none;/*list-style-type属性用来去掉项目符号*/
+            margin:0;
+            padding:0;
+            float: @float;/*左浮动*/
+                li{
+                    float: @float;
+                    padding-left: 120px;/*左内边距为120px*/
+                    a{
+                        color:#000000;
+                        font-size: @font;/*字体大小为16px*/
+                        &:hover{
+                            color:#F8C469;
+                            text-decoration: none;/*去掉下划线*/
+                        }
+                    }
+                }
+        }
+        p{
+            text-align: @text;
+        }
+}

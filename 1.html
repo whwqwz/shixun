@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style1.css" /><!--将css里的style1.css链接到1.html文件中来-->
+		<link rel="stylesheet" href="css/flexslider.css" />
+		<link rel="stylesheet" href="font/iconfont.css" /><!--将font里的iconfont.css链接到1.html文件中来-->
+		<!--输入meta 按F7-->
+		<!--viewport是网页默认的宽度和高度，下面一行代码的意思是，网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0，即网页初始大小占屏幕面积的100%-->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /><!--输入meta 按F7-->
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<div class="navbar navbar-default"><!--通过navbar-default类样式设计导航条的背景样式-->
+				<div class="contaier">
+					<!--导航条-->
+					<div class="navbar-header">
+						<button class="navbar-toggle" data-toggle="collapse" data-target="#menu" class="navbar">
+							<span class="icon-bar"></span><!--icon图标-->
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a href="#" class="navbar-brand"><!--导航条商标-->
+							<img src="img/logo.jpg" alt="" />
+						</a>
+					</div>
+					<div id="menu" class="collapse navbar-collapse"><!--响应式导航条-->
+						<!--ul>li*6>a[href="#"]-->
+						<ul class="nav navbar-nav pull-right"><!--pull-right 右对齐  pull-left 左对齐-->
+							<li><a href="index.html">首页</a></li><!--链接到index.html这个网页上-->
+							<li class="active"><a href="#">案例展示</a></li><!--active 激活-->
+							<li><a href="#">婚礼服务</a></li>
+							<li><a href="#">婚礼团队</a></li>
+							<li><a href="#">关于我们</a></li>
+							<li><a href="#">联系</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section id="banner">
+			<div class="flexslider">
+				<ul class="slides">
+					<li>
+						<img src="img/banner3.jpg" alt="" />
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="aboutus">
+			<div class="container">
+				<div class="row">
+					<div class="text-center col-md-3">
+						<img src="img/pic1.jpg" class="img-circle img-responsive" title="圆形图片"><!--img-circle：设计圆形的图片-->				
+					</div>
+					<div class="text-center col-md-3">
+						<img src="img/pic2.jpg" class="img-circle img-responsive" title="圆形图片"><!--img-responsive类来响应式图片-->				
+					</div>
+					<div class="text-center col-md-3">
+						<img src="img/pic3.jpg" class="img-circle img-responsive" title="圆形图片">				
+					</div>
+					<div class="text-center col-md-3">
+						<img src="img/pic4.jpg" class="img-circle img-responsive" title="圆形图片">				
+					</div>
+				</div>
+				<div class="row">
+					<div class="text-center col-md-3">
+						<img src="img/pic5.jpg" class="img-circle img-responsive" title="圆形图片">				
+					</div>
+					<div class="text-center col-md-3">
+						<img src="img/pic6.jpg" class="img-circle img-responsive" title="圆形图片">				
+					</div>
+					<div class="text-center col-md-3">
+						<img src="img/pic7.jpg" class="img-circle img-responsive" title="圆形图片">				
+					</div>
+					<div class="text-center col-md-3">
+						<img src="img/pic8.jpg" class="img-circle img-responsive" title="圆形图片">				
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="aboutus">
+			<div class="container">
+				<div class="row">
+					<h2>其他案例</h2>
+					<div class="col-md-4">
+						<i class="iconfont icon-jiezhi-copy"></i><!--iconfont矢量图标-->
+						<p>婚戒被作为爱情的信物，是婚礼中不可或缺 的重要道具。爱情故事由它带来新的篇章，爱的意义由它得到新的延伸。让婚戒首先亮相，也是婚礼颇具意义和创意的开场方式。在鲜花中寻找，由红线滑入司仪手中，由遥控飞机带入场中，都是不错的新鲜方式。</p>
+					</div>
+					<div class="col-md-4">
+						<i class="iconfont icon-penghua-"></i>
+						<p>新娘手捧花在婚礼上是必不可少的。爱与希冀就在那一片片花瓣间飞扬着。虽然只是一束小小的手捧花，却承载着新人的美满爱情和幸福未来。一款引人注目的手捧花不仅可以使新娘的造型更加完美，而且也是新娘经历幸福时刻的重要见证！</p>
+					</div>
+					<div class="col-md-4">
+						<i class="iconfont icon-weibiaoti--fuben-"></i>
+						<p>婚礼策划着重点在于婚礼本身，会场布置着重点在场景的布置，婚礼大于会场布置，一场好的婚礼，会场布置是为婚礼服务的，它是为了更好地表达婚礼而设置的一个元素，正如一场电影为表达主题而设置的周围环境布置一样，会场布置是为做好一场婚礼服务的。</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--脚部-->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="widget">
+							<h2>Today is your Wedding day</h2>
+							<!--ul>li*5>a[href="#"]-->
+							<ul>
+								<li><a href="#">网站首页</a></li>
+								<li><a href="#">婚礼服务</a></li>
+								<li><a href="#">婚庆展示</a></li>
+								<li><a href="#">品牌故事</a></li>
+								<li><a href="#">服务团队</a></li>
+							</ul>
+						</div>
+					</div>	
+				</div>
+				<p>Wedding Planner @  2015 All Rights Reserved | Privacy Policy</p>
+			</div>
+		</footer>
+	</body>
+	<!--先引入jquery-3.3.1.min.js，再引入bootstrap.min.js-->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/my.js"></script>
+	<script src="js/jquery.flexslider-min.js"></script>
+</html>
